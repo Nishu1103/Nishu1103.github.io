@@ -1,0 +1,236 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+import { SITE_AUTHOR, SITE_EMAIL, SITE_GITHUB, SITE_LINKEDIN } from '../consts';
+---
+
+<Layout
+	title="About Me"
+	description="Learn more about my journey as a full-stack developer and my passion for technology"
+	pubDate={new Date('January 01 2024')}
+	heroImage={AboutHeroImage}
+>
+	<div class="about-content">
+		<section class="intro">
+			<h2>👋 Hello, I'm {SITE_AUTHOR}</h2>
+			<p>
+				I'm a passionate full-stack developer with a love for creating innovative solutions 
+				and beautiful user experiences. With expertise in modern web technologies, I enjoy 
+				tackling complex problems and turning them into simple, elegant solutions.
+			</p>
+		</section>
+
+		<section class="journey">
+			<h2>🚀 My Development Journey</h2>
+			<p>
+				My journey in web development started with curiosity about how websites work. 
+				What began as simple HTML and CSS experiments has evolved into a deep passion 
+				for building scalable, performant web applications.
+			</p>
+			<p>
+				Over the years, I've worked with various technologies and frameworks, always 
+				seeking to learn new tools and best practices. From vanilla JavaScript to 
+				modern frameworks like React and Vue.js, each technology has taught me 
+				something valuable about software development.
+			</p>
+		</section>
+
+		<section class="skills">
+			<h2>🛠️ Technologies I Work With</h2>
+			<div class="skills-grid">
+				<div class="skill-category">
+					<h3>Frontend</h3>
+					<ul>
+						<li>React & Next.js</li>
+						<li>Vue.js & Nuxt.js</li>
+						<li>TypeScript</li>
+						<li>Tailwind CSS</li>
+						<li>Modern CSS (Grid, Flexbox)</li>
+					</ul>
+				</div>
+				<div class="skill-category">
+					<h3>Backend</h3>
+					<ul>
+						<li>Node.js & Express</li>
+						<li>Python & Django</li>
+						<li>RESTful APIs</li>
+						<li>GraphQL</li>
+						<li>Database Design</li>
+					</ul>
+				</div>
+				<div class="skill-category">
+					<h3>Tools & DevOps</h3>
+					<ul>
+						<li>Git & GitHub</li>
+						<li>Docker</li>
+						<li>CI/CD Pipelines</li>
+						<li>AWS & Cloud Platforms</li>
+						<li>Testing (Jest, Cypress)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="philosophy">
+			<h2>💭 My Development Philosophy</h2>
+			<p>
+				I believe in writing clean, maintainable code that not only works today 
+				but can evolve with changing requirements. Good software is built through 
+				careful planning, thorough testing, and continuous learning.
+			</p>
+			<p>
+				I'm passionate about:
+			</p>
+			<ul>
+				<li><strong>Performance</strong> - Building fast, efficient applications</li>
+				<li><strong>User Experience</strong> - Creating intuitive, accessible interfaces</li>
+				<li><strong>Code Quality</strong> - Writing readable, well-tested code</li>
+				<li><strong>Learning</strong> - Staying up-to-date with new technologies</li>
+				<li><strong>Collaboration</strong> - Working effectively in teams</li>
+			</ul>
+		</section>
+
+		<section class="blog-purpose">
+			<h2>📝 Why I Blog</h2>
+			<p>
+				This blog is my way of sharing knowledge and experiences from my development 
+				journey. I write about the challenges I face, the solutions I discover, and 
+				the lessons I learn along the way.
+			</p>
+			<p>
+				Whether you're a beginner just starting out or an experienced developer 
+				looking for new insights, I hope you'll find something valuable here. 
+				I believe in the power of sharing knowledge and learning from the community.
+			</p>
+		</section>
+
+		<section class="contact">
+			<h2>🤝 Let's Connect</h2>
+			<p>
+				I'm always interested in connecting with fellow developers, discussing 
+				new technologies, and exploring potential collaborations. Feel free to 
+				reach out if you'd like to chat about web development, share ideas, or 
+				just say hello!
+			</p>
+			<div class="contact-links">
+				<a href={`mailto:${SITE_EMAIL}`} class="contact-link">
+					📧 Email Me
+				</a>
+				<a href={SITE_GITHUB} target="_blank" rel="noopener noreferrer" class="contact-link">
+					🐙 GitHub
+				</a>
+				<a href={SITE_LINKEDIN} target="_blank" rel="noopener noreferrer" class="contact-link">
+					💼 LinkedIn
+				</a>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.about-content {
+		max-width: 800px;
+		margin: 0 auto;
+		line-height: 1.7;
+	}
+
+	section {
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		color: var(--terminal-accent);
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		color: var(--terminal-blue);
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		color: var(--terminal-text);
+	}
+
+	ul {
+		margin-bottom: 1rem;
+		padding-left: 1.5rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+		color: var(--terminal-text);
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 1rem;
+	}
+
+	.skill-category {
+		background: var(--terminal-surface);
+		padding: 1.5rem;
+		border-radius: 8px;
+		border-left: 4px solid var(--terminal-accent);
+		border: 1px solid var(--terminal-border);
+	}
+
+	.skill-category h3 {
+		margin-top: 0;
+		color: var(--terminal-accent);
+	}
+
+	.skill-category ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.skill-category li {
+		padding: 0.25rem 0;
+		color: var(--terminal-text-muted);
+	}
+
+	.contact-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	.contact-link {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background: var(--terminal-surface);
+		color: var(--terminal-blue);
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		border: 1px solid var(--terminal-border);
+	}
+
+	.contact-link:hover {
+		background: var(--terminal-surface-alt);
+		border-color: var(--terminal-blue);
+		color: var(--terminal-blue-light);
+	}
+
+	@media (max-width: 768px) {
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.contact-links {
+			flex-direction: column;
+		}
+		
+		.contact-link {
+			text-align: center;
+		}
+	}
+</style>

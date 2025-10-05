@@ -1,0 +1,378 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="terminal-window">
+				<div class="terminal-header">
+					<div class="terminal-buttons">
+						<span class="btn btn-red"></span>
+						<span class="btn btn-yellow"></span>
+						<span class="btn btn-green"></span>
+					</div>
+					<div class="terminal-title">nishant@dev:~$</div>
+				</div>
+				<div class="terminal-body">
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">whoami</span>
+					</div>
+					<div class="terminal-output">
+						{SITE_AUTHOR} - Full Stack Developer
+					</div>
+					
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">cat about.txt</span>
+					</div>
+					<div class="terminal-output">
+						<div class="ascii-art">
+							<h2>NISHANT KUMAWAT</h2>
+							<p>Full Stack Developer</p>
+						</div>
+						<p>Passionate about building scalable web applications</p>
+						<p>Expertise: React, Node.js, TypeScript, Python</p>
+						<p>Currently exploring: Astro, WebAssembly, Rust</p>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">ls -la blog/</span>
+					</div>
+					<div class="terminal-output">
+						<div class="file-list">
+							<div class="file-item">
+								<span class="file-type">-rw-r--r--</span>
+								<span class="file-size">2.1K</span>
+								<span class="file-date">Jan 15</span>
+								<span class="file-name">getting-started-astro.md</span>
+							</div>
+							<div class="file-item">
+								<span class="file-type">-rw-r--r--</span>
+								<span class="file-size">4.2K</span>
+								<span class="file-date">Jan 10</span>
+								<span class="file-name">modern-web-applications.md</span>
+							</div>
+							<div class="file-item">
+								<span class="file-type">-rw-r--r--</span>
+								<span class="file-size">6.8K</span>
+								<span class="file-date">Jan 05</span>
+								<span class="file-name">typescript-best-practices.md</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">cat skills.json</span>
+					</div>
+					<div class="terminal-output">
+						<pre class="json-output">{`{
+  "frontend": [
+    "React", "Vue.js", "TypeScript", 
+    "Next.js", "Tailwind CSS"
+  ],
+  "backend": [
+    "Node.js", "Python", "Express.js",
+    "Django", "PostgreSQL", "MongoDB"
+  ],
+  "tools": [
+    "Git", "Docker", "AWS", "Jest",
+    "Cypress", "Webpack", "Vite"
+  ],
+  "interests": [
+    "Performance Optimization",
+    "System Design", 
+    "Open Source",
+    "DevOps"
+  ]
+}`}</pre>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">./connect.sh</span>
+					</div>
+					<div class="terminal-output">
+						<div class="connect-links">
+							<a href="/blog" class="link">📝 Read Blog Posts</a>
+							<a href="/about" class="link">👨‍💻 About Me</a>
+							<a href="https://github.com/Nishu1103" target="_blank" class="link">🐙 GitHub</a>
+							<a href="https://linkedin.com/in/nishant-kumawat" target="_blank" class="link">💼 LinkedIn</a>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="cursor">█</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="code-stats">
+				<div class="stat-item">
+					<div class="stat-number">2+</div>
+					<div class="stat-label">Years Coding</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">15+</div>
+					<div class="stat-label">Projects</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">8+</div>
+					<div class="stat-label">Technologies</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">∞</div>
+					<div class="stat-label">Coffee Cups</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	body {
+		background: var(--terminal-bg);
+		color: var(--terminal-text);
+		font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+		margin: 0;
+		padding: 0;
+	}
+
+	.terminal-window {
+		max-width: 1000px;
+		margin: 2rem auto;
+		background: var(--terminal-surface);
+		border-radius: 8px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+	}
+
+	.terminal-header {
+		background: var(--terminal-surface-alt);
+		padding: 0.75rem 1rem;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid var(--terminal-border);
+	}
+
+	.terminal-buttons {
+		display: flex;
+		gap: 0.5rem;
+		margin-right: 1rem;
+	}
+
+	.btn {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+
+	.btn-red { background: var(--terminal-red); }
+	.btn-yellow { background: var(--terminal-yellow); }
+	.btn-green { background: var(--terminal-green); }
+
+	.terminal-title {
+		color: var(--terminal-text-muted);
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.terminal-body {
+		padding: 1.5rem;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.terminal-line {
+		margin-bottom: 0.5rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.prompt {
+		color: var(--terminal-accent);
+		font-weight: 600;
+		margin-right: 0.5rem;
+	}
+
+	.command {
+		color: var(--terminal-blue);
+		font-weight: 500;
+	}
+
+	.terminal-output {
+		margin-left: 0;
+		margin-bottom: 1rem;
+		color: var(--terminal-text);
+	}
+
+	.ascii-art {
+		color: var(--terminal-accent);
+		font-size: 0.8rem;
+		margin: 1rem 0;
+	}
+
+	.ascii-art pre {
+		margin: 0;
+		font-family: inherit;
+	}
+
+	.file-list {
+		margin: 0.5rem 0;
+	}
+
+	.file-item {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 0.25rem;
+		font-size: 0.9rem;
+	}
+
+	.file-type {
+		color: var(--terminal-text-muted);
+		width: 80px;
+	}
+
+	.file-size {
+		color: var(--terminal-text-muted);
+		width: 40px;
+	}
+
+	.file-date {
+		color: var(--terminal-text-muted);
+		width: 50px;
+	}
+
+	.file-name {
+		color: var(--terminal-blue);
+		cursor: pointer;
+	}
+
+	.file-name:hover {
+		color: var(--terminal-blue-light);
+		text-decoration: underline;
+	}
+
+	.json-output {
+		background: var(--terminal-bg);
+		padding: 1rem;
+		border-radius: 4px;
+		border: 1px solid var(--terminal-border);
+		margin: 0.5rem 0;
+		color: var(--terminal-text);
+		font-size: 0.85rem;
+		overflow-x: auto;
+	}
+
+	.connect-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 1rem 0;
+	}
+
+	.link {
+		color: var(--terminal-blue);
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border: 1px solid var(--terminal-border);
+		border-radius: 4px;
+		background: var(--terminal-bg);
+		transition: all 0.2s ease;
+		font-size: 0.9rem;
+	}
+
+	.link:hover {
+		background: var(--terminal-surface-alt);
+		border-color: var(--terminal-blue);
+		color: var(--terminal-blue-light);
+	}
+
+	.cursor {
+		color: var(--terminal-blue);
+		animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+
+	.code-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 2rem;
+		max-width: 800px;
+		margin: 3rem auto;
+		padding: 0 2rem;
+	}
+
+	.stat-item {
+		text-align: center;
+		padding: 1.5rem;
+		background: var(--terminal-surface);
+		border-radius: 8px;
+		border: 1px solid var(--terminal-border);
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--terminal-accent);
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		color: var(--terminal-text-muted);
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	@media (max-width: 768px) {
+		.terminal-body {
+			padding: 1rem;
+			font-size: 0.85rem;
+		}
+
+		.ascii-art {
+			font-size: 0.7rem;
+		}
+
+		.file-item {
+			font-size: 0.8rem;
+		}
+
+		.connect-links {
+			flex-direction: column;
+		}
+
+		.code-stats {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+
+		.stat-number {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.code-stats {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
