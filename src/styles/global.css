@@ -209,8 +209,11 @@ hr {
 	}
 	
 	main {
-		padding: 1rem;
-		min-height: calc(100vh - 150px);
+		padding: 0;
+		min-height: 100vh;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
 	}
 	
 	h1 {
@@ -226,14 +229,100 @@ hr {
 	}
 
 	.terminal-window {
-		margin: 1rem auto;
-		max-height: calc(100vh - 150px);
+		margin: 0;
+		height: 100vh;
+		width: 100%;
+		border-radius: 0;
+		max-height: none;
+	}
+
+	.terminal-header {
+		padding: 0.5rem 0.75rem;
+	}
+
+	.terminal-title {
+		font-size: 0.8rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.terminal-body {
-		padding: 1rem;
-		font-size: 0.85rem;
-		max-height: calc(100vh - 250px);
+		padding: 0.75rem;
+		font-size: 0.8rem;
+		height: calc(100vh - 50px);
+		line-height: 1.4;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.terminal-line {
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+
+	.prompt {
+		font-size: 0.8rem;
+		margin-right: 0.25rem;
+	}
+
+	.command {
+		font-size: 0.8rem;
+	}
+
+	.terminal-output {
+		margin-left: 0;
+		margin-bottom: 0.75rem;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		padding: 0;
+		min-height: 100vh;
+		margin: 0;
+	}
+
+	.terminal-window {
+		margin: 0;
+		height: 100vh;
+		width: 100%;
+		border-radius: 0;
+		max-height: none;
+	}
+
+	.terminal-header {
+		padding: 0.4rem 0.5rem;
+	}
+
+	.terminal-title {
+		font-size: 0.7rem;
+	}
+
+	.terminal-body {
+		padding: 0.5rem;
+		font-size: 0.75rem;
+		height: calc(100vh - 40px);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.prompt {
+		font-size: 0.7rem;
+	}
+
+	.command {
+		font-size: 0.7rem;
+	}
+
+	.btn {
+		width: 8px;
+		height: 8px;
 	}
 }
 
@@ -289,6 +378,7 @@ hr {
 	max-height: calc(100vh - 200px);
 	display: flex;
 	flex-direction: column;
+	width: calc(100% - 2rem);
 }
 
 .terminal-header {
