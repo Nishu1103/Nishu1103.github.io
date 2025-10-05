@@ -2,7 +2,7 @@
 title: "TypeScript Best Practices for Better Code Quality"
 description: "Essential TypeScript patterns and practices that will improve your code quality and developer experience."
 pubDate: 2024-01-05
-heroImage: "/blog-placeholder-3.jpg"
+# heroImage: "/blog-placeholder-3.jpg"
 tags: ["typescript", "javascript", "best-practices", "code-quality"]
 ---
 

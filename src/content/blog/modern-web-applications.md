@@ -2,7 +2,7 @@
 title: "Building Modern Web Applications: Lessons Learned"
 description: "Key insights from building scalable web applications with modern frameworks and best practices."
 pubDate: 2024-01-10
-heroImage: "/blog-placeholder-2.jpg"
+# heroImage: "/blog-placeholder-2.jpg"
 tags: ["web-development", "architecture", "best-practices", "scalability"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Getting Started with Astro: My First Experience"
 description: "Sharing my journey of building a blog with Astro and TypeScript, and why I chose this modern framework."
 pubDate: 2024-01-15
-heroImage: "/blog-placeholder-1.jpg"
+# heroImage: "/blog-placeholder-1.jpg"
 tags: ["astro", "typescript", "web-development", "blog"]
 ---
 
