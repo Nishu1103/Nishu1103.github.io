@@ -1,236 +1,389 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
-import { SITE_AUTHOR, SITE_EMAIL, SITE_GITHUB, SITE_LINKEDIN } from '../consts';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, SITE_EMAIL, SITE_GITHUB, SITE_LINKEDIN } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Learn more about my journey as a full-stack developer and my passion for technology"
-	pubDate={new Date('January 01 2024')}
-	heroImage={AboutHeroImage}
->
-	<div class="about-content">
-		<section class="intro">
-			<h2>👋 Hello, I'm {SITE_AUTHOR}</h2>
-			<p>
-				I'm a passionate full-stack developer with a love for creating innovative solutions 
-				and beautiful user experiences. With expertise in modern web technologies, I enjoy 
-				tackling complex problems and turning them into simple, elegant solutions.
-			</p>
-		</section>
-
-		<section class="journey">
-			<h2>🚀 My Development Journey</h2>
-			<p>
-				My journey in web development started with curiosity about how websites work. 
-				What began as simple HTML and CSS experiments has evolved into a deep passion 
-				for building scalable, performant web applications.
-			</p>
-			<p>
-				Over the years, I've worked with various technologies and frameworks, always 
-				seeking to learn new tools and best practices. From vanilla JavaScript to 
-				modern frameworks like React and Vue.js, each technology has taught me 
-				something valuable about software development.
-			</p>
-		</section>
-
-		<section class="skills">
-			<h2>🛠️ Technologies I Work With</h2>
-			<div class="skills-grid">
-				<div class="skill-category">
-					<h3>Frontend</h3>
-					<ul>
-						<li>React & Next.js</li>
-						<li>Vue.js & Nuxt.js</li>
-						<li>TypeScript</li>
-						<li>Tailwind CSS</li>
-						<li>Modern CSS (Grid, Flexbox)</li>
-					</ul>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="terminal-window">
+				<div class="terminal-header">
+					<div class="terminal-buttons">
+						<span class="btn btn-red"></span>
+						<span class="btn btn-yellow"></span>
+						<span class="btn btn-green"></span>
+					</div>
+					<div class="terminal-title">about.txt</div>
 				</div>
-				<div class="skill-category">
-					<h3>Backend</h3>
-					<ul>
-						<li>Node.js & Express</li>
-						<li>Python & Django</li>
-						<li>RESTful APIs</li>
-						<li>GraphQL</li>
-						<li>Database Design</li>
-					</ul>
-				</div>
-				<div class="skill-category">
-					<h3>Tools & DevOps</h3>
-					<ul>
-						<li>Git & GitHub</li>
-						<li>Docker</li>
-						<li>CI/CD Pipelines</li>
-						<li>AWS & Cloud Platforms</li>
-						<li>Testing (Jest, Cypress)</li>
-					</ul>
+				<div class="terminal-body">
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">cat about.txt</span>
+					</div>
+					<div class="terminal-output">
+						<div class="ascii-art">
+							<h1>NISHANT KUMAWAT</h1>
+							<p>Full Stack Developer</p>
+						</div>
+						
+						<div class="about-content">
+							<p class="intro-text">
+								Passionate about building digital experiences that matter. 
+								I turn coffee into code and ideas into reality.
+							</p>
+							
+							<div class="stats-grid">
+								<div class="stat">
+									<span class="stat-number">2+</span>
+									<span class="stat-label">Years Coding</span>
+								</div>
+								<div class="stat">
+									<span class="stat-number">3</span>
+									<span class="stat-label">Production Systems</span>
+								</div>
+								<div class="stat">
+									<span class="stat-number">∞</span>
+									<span class="stat-label">Cups of Coffee</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">cat experience.txt</span>
+					</div>
+					<div class="terminal-output">
+						<div class="experience-section">
+							<div class="company-header">
+								<span class="company-name">
+									<a href="https://kwike.in" target="_blank" rel="noopener noreferrer">kwike.in</a>
+								</span>
+								<span class="role">Founding Software Engineer</span>
+							</div>
+							<div class="achievements">
+								<div class="achievement">
+									<span class="achievement-icon">🚀</span>
+									<span class="achievement-text">Built 3 production systems from scratch</span>
+								</div>
+								<div class="achievement">
+									<span class="achievement-icon">💼</span>
+									<span class="achievement-text">CRM Platform</span>
+								</div>
+								<div class="achievement">
+									<span class="achievement-icon">🛒</span>
+									<span class="achievement-text">POS System</span>
+								</div>
+								<div class="achievement">
+									<span class="achievement-icon">🌐</span>
+									<span class="achievement-text">Main Website (<a href="https://kwike.in" target="_blank" rel="noopener noreferrer">kwike.in</a>)</span>
+								</div>
+							</div>
+							<div class="focus-areas">
+								<p><strong>Focus:</strong> Scalability • UX • Full-stack ownership</p>
+								<p><strong>Pipeline:</strong> Architecture → API → Deployment → Monitoring</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">cat philosophy.md</span>
+					</div>
+					<div class="terminal-output">
+						<div class="philosophy">
+							<p>
+								<strong>Clean Code</strong> over clever code.<br>
+								<strong>User Experience</strong> over flashy features.<br>
+								<strong>Learning</strong> over knowing everything.<br>
+								<strong>Collaboration</strong> over competition.
+							</p>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="command">./connect.sh</span>
+					</div>
+					<div class="terminal-output">
+						<div class="connect-links">
+							<a href={`mailto:${SITE_EMAIL}`} class="link">
+								📧 Email Me
+							</a>
+							<a href={SITE_GITHUB} target="_blank" class="link">
+								🐙 GitHub
+							</a>
+							<a href={SITE_LINKEDIN} target="_blank" class="link">
+								💼 LinkedIn
+							</a>
+							<a href="/blog" class="link">
+								📝 Read My Blog
+							</a>
+						</div>
+					</div>
+
+					<div class="terminal-line">
+						<span class="prompt">nishant@dev:~$</span>
+						<span class="cursor">█</span>
+					</div>
 				</div>
 			</div>
-		</section>
-
-		<section class="philosophy">
-			<h2>💭 My Development Philosophy</h2>
-			<p>
-				I believe in writing clean, maintainable code that not only works today 
-				but can evolve with changing requirements. Good software is built through 
-				careful planning, thorough testing, and continuous learning.
-			</p>
-			<p>
-				I'm passionate about:
-			</p>
-			<ul>
-				<li><strong>Performance</strong> - Building fast, efficient applications</li>
-				<li><strong>User Experience</strong> - Creating intuitive, accessible interfaces</li>
-				<li><strong>Code Quality</strong> - Writing readable, well-tested code</li>
-				<li><strong>Learning</strong> - Staying up-to-date with new technologies</li>
-				<li><strong>Collaboration</strong> - Working effectively in teams</li>
-			</ul>
-		</section>
-
-		<section class="blog-purpose">
-			<h2>📝 Why I Blog</h2>
-			<p>
-				This blog is my way of sharing knowledge and experiences from my development 
-				journey. I write about the challenges I face, the solutions I discover, and 
-				the lessons I learn along the way.
-			</p>
-			<p>
-				Whether you're a beginner just starting out or an experienced developer 
-				looking for new insights, I hope you'll find something valuable here. 
-				I believe in the power of sharing knowledge and learning from the community.
-			</p>
-		</section>
-
-		<section class="contact">
-			<h2>🤝 Let's Connect</h2>
-			<p>
-				I'm always interested in connecting with fellow developers, discussing 
-				new technologies, and exploring potential collaborations. Feel free to 
-				reach out if you'd like to chat about web development, share ideas, or 
-				just say hello!
-			</p>
-			<div class="contact-links">
-				<a href={`mailto:${SITE_EMAIL}`} class="contact-link">
-					📧 Email Me
-				</a>
-				<a href={SITE_GITHUB} target="_blank" rel="noopener noreferrer" class="contact-link">
-					🐙 GitHub
-				</a>
-				<a href={SITE_LINKEDIN} target="_blank" rel="noopener noreferrer" class="contact-link">
-					💼 LinkedIn
-				</a>
-			</div>
-		</section>
-	</div>
-</Layout>
+		</main>
+		<Footer />
+	</body>
+</html>
 
 <style>
-	.about-content {
-		max-width: 800px;
-		margin: 0 auto;
-		line-height: 1.7;
+	.terminal-output {
+		margin-left: 0;
+		margin-bottom: 1rem;
+		color: var(--terminal-text);
 	}
 
-	section {
-		margin-bottom: 3rem;
-	}
-
-	h2 {
+	.ascii-art {
 		color: var(--terminal-accent);
-		margin-bottom: 1rem;
-		font-size: 1.8rem;
+		font-size: 0.8rem;
+		margin: 1rem 0;
+		text-align: center;
 	}
 
-	h3 {
+	.ascii-art h1 {
+		font-size: 1.5rem;
+		margin: 0.5rem 0;
+		color: var(--terminal-accent);
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+
+	.ascii-art p {
+		margin: 0.25rem 0;
 		color: var(--terminal-blue);
-		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
+		font-weight: 500;
 	}
 
-	p {
-		margin-bottom: 1rem;
+	.about-content {
+		margin: 2rem 0;
+	}
+
+	.intro-text {
+		font-size: 1.1rem;
+		text-align: center;
 		color: var(--terminal-text);
+		margin: 1.5rem 0;
+		font-style: italic;
 	}
 
-	ul {
-		margin-bottom: 1rem;
-		padding-left: 1.5rem;
-	}
-
-	li {
-		margin-bottom: 0.5rem;
-		color: var(--terminal-text);
-	}
-
-	.skills-grid {
+	.stats-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		margin-top: 1rem;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin: 2rem 0;
 	}
 
-	.skill-category {
-		background: var(--terminal-surface);
-		padding: 1.5rem;
-		border-radius: 8px;
-		border-left: 4px solid var(--terminal-accent);
+	.stat {
+		text-align: center;
+		padding: 1rem;
+		background: var(--terminal-bg);
+		border-radius: 6px;
 		border: 1px solid var(--terminal-border);
 	}
 
-	.skill-category h3 {
-		margin-top: 0;
+	.stat-number {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 700;
 		color: var(--terminal-accent);
+		margin-bottom: 0.25rem;
 	}
 
-	.skill-category ul {
-		list-style: none;
-		padding-left: 0;
+	.stat-label {
+		font-size: 0.8rem;
+		color: var(--terminal-text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
-	.skill-category li {
-		padding: 0.25rem 0;
+	.experience-section {
+		margin: 1rem 0;
+		padding: 1rem;
+		background: var(--terminal-bg);
+		border-radius: 6px;
+		border-left: 4px solid var(--terminal-accent);
+	}
+
+	.company-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid var(--terminal-border);
+	}
+
+	.company-name {
+		color: var(--terminal-accent);
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+
+	.role {
+		color: var(--terminal-blue);
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+
+	.achievements {
+		margin: 1rem 0;
+	}
+
+	.achievement {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+	}
+
+	.achievement-icon {
+		font-size: 1rem;
+		width: 20px;
+		text-align: center;
+	}
+
+	.achievement-text {
+		color: var(--terminal-text);
+	}
+
+	.focus-areas {
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--terminal-border);
+	}
+
+	.focus-areas p {
+		margin: 0.25rem 0;
+		font-size: 0.85rem;
 		color: var(--terminal-text-muted);
 	}
 
-	.contact-links {
+	.focus-areas strong {
+		color: var(--terminal-blue);
+	}
+
+	.skills-list {
+		margin: 0.5rem 0;
+	}
+
+	.skill-item {
 		display: flex;
 		gap: 1rem;
-		flex-wrap: wrap;
-		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+		align-items: center;
 	}
 
-	.contact-link {
-		display: inline-block;
-		padding: 0.75rem 1.5rem;
-		background: var(--terminal-surface);
+	.skill-category {
+		color: var(--terminal-blue);
+		font-weight: 600;
+		width: 80px;
+	}
+
+	.skill-tech {
+		color: var(--terminal-text);
+	}
+
+	.philosophy {
+		margin: 1rem 0;
+		padding: 1rem;
+		background: var(--terminal-bg);
+		border-radius: 6px;
+		border-left: 4px solid var(--terminal-accent);
+	}
+
+	.philosophy p {
+		margin: 0;
+		line-height: 1.8;
+	}
+
+	.philosophy strong {
+		color: var(--terminal-accent);
+	}
+
+	.connect-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 1rem 0;
+	}
+
+	.link {
 		color: var(--terminal-blue);
 		text-decoration: none;
-		border-radius: 6px;
-		font-weight: 500;
-		transition: all 0.3s ease;
+		padding: 0.5rem 1rem;
 		border: 1px solid var(--terminal-border);
+		border-radius: 4px;
+		background: var(--terminal-bg);
+		transition: all 0.2s ease;
+		font-size: 0.9rem;
 	}
 
-	.contact-link:hover {
+	.link:hover {
 		background: var(--terminal-surface-alt);
 		border-color: var(--terminal-blue);
 		color: var(--terminal-blue-light);
 	}
 
+
 	@media (max-width: 768px) {
-		.skills-grid {
+		.terminal-body {
+			padding: 1rem;
+			font-size: 0.85rem;
+		}
+
+		.ascii-art h1 {
+			font-size: 1.2rem;
+		}
+
+		.stats-grid {
 			grid-template-columns: 1fr;
+			gap: 0.5rem;
 		}
-		
-		.contact-links {
+
+		.stat-number {
+			font-size: 1.5rem;
+		}
+
+		.company-header {
 			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.25rem;
 		}
-		
-		.contact-link {
-			text-align: center;
+
+		.achievement {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.25rem;
+		}
+
+		.skill-item {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.25rem;
+		}
+
+		.skill-category {
+			width: auto;
+		}
+
+		.connect-links {
+			flex-direction: column;
 		}
 	}
 </style>

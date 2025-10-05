@@ -28,7 +28,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 						<span class="command">whoami</span>
 					</div>
 					<div class="terminal-output">
-						{SITE_AUTHOR} - Full Stack Developer
+						{SITE_AUTHOR}
 					</div>
 					
 					<div class="terminal-line">
@@ -37,12 +37,18 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</div>
 					<div class="terminal-output">
 						<div class="ascii-art">
-							<h2>NISHANT KUMAWAT</h2>
-							<p>Full Stack Developer</p>
+							<pre>
+ ____  _____  _____   ______   ____  ____       _       ____  _____  _________  
+|_   \|_   _||_   _|.' ____ \ |_   ||   _|     / \     |_   \|_   _||  _   _  | 
+  |   \ | |    | |  | (___ \_|  | |__| |      / _ \      |   \ | |  |_/ | | \_| 
+  | |\ \| |    | |   _.____`.   |  __  |     / ___ \     | |\ \| |      | |     
+ _| |_\   |_  _| |_ | \____) | _| |  | |_  _/ /   \ \_  _| |_\   |_    _| |_    
+|_____|\____||_____| \______.'|____||____||____| |____||_____|\____|  |_____|   
+                                                                                
+</pre>
+						 
 						</div>
-						<p>Passionate about building scalable web applications</p>
-						<p>Expertise: React, Node.js, TypeScript, Python</p>
-						<p>Currently exploring: Astro, WebAssembly, Rust</p>
+					 
 					</div>
 
 					<div class="terminal-line">
@@ -72,31 +78,8 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 						</div>
 					</div>
 
-					<div class="terminal-line">
-						<span class="prompt">nishant@dev:~$</span>
-						<span class="command">cat skills.json</span>
-					</div>
-					<div class="terminal-output">
-						<pre class="json-output">{`{
-  "frontend": [
-    "React", "Vue.js", "TypeScript", 
-    "Next.js", "Tailwind CSS"
-  ],
-  "backend": [
-    "Node.js", "Python", "Express.js",
-    "Django", "PostgreSQL", "MongoDB"
-  ],
-  "tools": [
-    "Git", "Docker", "AWS", "Jest",
-    "Cypress", "Webpack", "Vite"
-  ],
-  "interests": [
-    "Performance Optimization",
-    "System Design", 
-    "Open Source",
-    "DevOps"
-  ]
-}`}</pre>
+				 
+ 
 					</div>
 
 					<div class="terminal-line">
@@ -149,68 +132,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 		font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
 		margin: 0;
 		padding: 0;
-	}
-
-	.terminal-window {
-		max-width: 1000px;
-		margin: 2rem auto;
-		background: var(--terminal-surface);
-		border-radius: 8px;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-		overflow: hidden;
-	}
-
-	.terminal-header {
-		background: var(--terminal-surface-alt);
-		padding: 0.75rem 1rem;
-		display: flex;
-		align-items: center;
-		border-bottom: 1px solid var(--terminal-border);
-	}
-
-	.terminal-buttons {
-		display: flex;
-		gap: 0.5rem;
-		margin-right: 1rem;
-	}
-
-	.btn {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-	}
-
-	.btn-red { background: var(--terminal-red); }
-	.btn-yellow { background: var(--terminal-yellow); }
-	.btn-green { background: var(--terminal-green); }
-
-	.terminal-title {
-		color: var(--terminal-text-muted);
-		font-size: 0.9rem;
-		font-weight: 500;
-	}
-
-	.terminal-body {
-		padding: 1.5rem;
-		font-size: 0.95rem;
-		line-height: 1.6;
-	}
-
-	.terminal-line {
-		margin-bottom: 0.5rem;
-		display: flex;
-		align-items: center;
-	}
-
-	.prompt {
-		color: var(--terminal-accent);
-		font-weight: 600;
-		margin-right: 0.5rem;
-	}
-
-	.command {
-		color: var(--terminal-blue);
-		font-weight: 500;
 	}
 
 	.terminal-output {
@@ -301,15 +222,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 		color: var(--terminal-blue-light);
 	}
 
-	.cursor {
-		color: var(--terminal-blue);
-		animation: blink 1s infinite;
-	}
-
-	@keyframes blink {
-		0%, 50% { opacity: 1; }
-		51%, 100% { opacity: 0; }
-	}
 
 	.code-stats {
 		display: grid;
